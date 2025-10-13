@@ -1,0 +1,6 @@
+{%- set timezone = 'PST' %}
+{%- set timezone_offset = '-8 0' %}
+{%- set timezone_dst = 'PDT' %}
+clock timezone {{ timezone }} {{ timezone_offset }}
+clock summer-time {{ timezone_dst }} recurring
+

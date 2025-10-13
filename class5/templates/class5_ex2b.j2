@@ -1,0 +1,17 @@
+# nxos1
+interface {{ nxos1_intf }}
+  ip address {{ nxos1_ipv4 }}/{{ nxos1_mask }}
+ 
+router bgp {{ nxos1_local_as }}
+  neighbor {{ nxos1_bgp_peer }} remote-as {{ nxos1_local_as }}
+    address-family ipv4 unicast
+
+
+# nxos2
+interface {{ nxos2_intf }}
+  ip address {{ nxos2_ipv4 }}/{{ nxos2_mask }}
+
+router bgp {{ nxos2_local_as }}
+  neighbor {{ nxos2_bgp_peer }} remote-as {{ nxos2_local_as }}
+    address-family ipv4 unicast
+
